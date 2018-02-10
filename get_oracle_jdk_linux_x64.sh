@@ -22,7 +22,7 @@ readonly jdk_download_url2=$(
 readonly jdk_download_url3="${url}${jdk_download_url2}"
 readonly jdk_download_url4=$(
     curl -s $jdk_download_url3 | \
-    egrep -o "http\:\/\/download.oracle\.com\/otn-pub\/java\/jdk\/[8-9](u[0-9]+|\+).*\/jdk-${jdk_version}.*(-|_)linux-(x64|x64_bin).$ext"
+    egrep -o "http\:\/\/download.oracle\.com\/otn-pub\/java\/jdk\/[8-9](u[0-9]+|\+).*\/jdk-${jdk_version}.8u162(-|_)linux-(x64|x64_bin).$ext"
 )
 
 for dl_url in ${jdk_download_url4[@]}; do
